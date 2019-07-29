@@ -1,0 +1,59 @@
+ 
+        
+        <mat-sidenav-container  class="example-container" >
+            <app-stsidebar></app-stsidebar>
+            
+
+                <mat-sidenav-content  >
+
+                  <div fxLayoutAlign="end center" fxLayout="row" class="upperbar">
+                    
+                        <button  class="scorebutton" mat-raised-button color="primary">561</button>
+                   
+                    
+                    <mat-form-field>
+                        <mat-label>Select course</mat-label>
+                        <mat-select panelClass="example-panel-red" [(value)]="selected">
+                         
+                          <mat-option value="option1">Bank exam</mat-option>
+                          <mat-option value="option2">IBPS</mat-option>
+                          <mat-option value="option3">CLAT</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                      <button mat-button [matMenuTriggerFor]="menu1"><mat-icon> notification_important</mat-icon></button>
+                      <mat-menu #menu1="matMenu">
+                          <button mat-menu-item>Item 3</button>
+                          <button mat-menu-item>Item 4</button>
+                        </mat-menu>
+                    
+                    <button mat-button [matMenuTriggerFor]="menu"><mat-icon> account_circle</mat-icon></button>
+                    <mat-menu #menu="matMenu">
+                      <a routerLink="/profilestudent" routerLinkActive="active"> <button mat-menu-item>Profile</button></a>
+                      <a routerLink="/billingstudent" routerLinkActive="active"> <button mat-menu-item>Billing</button></a>
+                      <button mat-menu-item>Log out</button>
+                    </mat-menu>
+                  </div>
+
+                  <div>
+                      <mat-tab-group class="fullmain" >
+                          <mat-tab  class="tab1" label="Main"> 
+                            <div class ="maincontent">
+                                <iframe class="maincontent"  src="https://player.vimeo.com/video/344119103" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>  
+                            </div>
+                              
+                          </mat-tab>
+                          
+                          <mat-tab class="tab2" label="Q and A"> q-what do you want? </mat-tab>
+                        </mat-tab-group>
+                  </div>
+        
+        
+        
+                </mat-sidenav-content>
+              </mat-sidenav-container>
+            <router-outlet></router-outlet>
+
+
+
+   
+    

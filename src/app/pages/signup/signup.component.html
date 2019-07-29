@@ -1,0 +1,25 @@
+
+<div [ngStyle]="{'background-image': 'url(../../assets/2edu.svg),linear-gradient(to right, #6A82FB, #FC5C7D)'}" fxLayoutAlign="center center"  class="signup-page">
+            
+    <section   class="signup-form">
+            <h2 fxLayoutAlign="center">Please Sign up!</h2>    
+            <form fxLayout="column" >
+                  <mat-form-field>
+                      <input type="email" matInput placeholder="Your email">
+                  </mat-form-field>
+                  <mat-form-field>
+                        <input type="password" matInput placeholder="Enter password">
+                    </mat-form-field>
+                    <mat-form-field>
+                            <input type="password" matInput placeholder="ReEnter password">
+                        </mat-form-field>
+                        <button  class="signup-button" mat-raised-button color="accent">Signup</button>
+                        <a routerLink="/login" routerLinkActive="active"><button class="login-button" mat-raised-button color="primary">Login</button></a>
+                </form>
+            
+            </section>
+
+</div>
+
+
+
