@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import {FlexLayoutModule} from '@angular/flex-layout';
 
+import { DialogueComponent } from './dialogue.component';
 
-describe('StudentDashboardComponent', () => {
-  let component: StudentDashboardComponent;
-  let fixture: ComponentFixture<StudentDashboardComponent>;
+describe('DialogueComponent', () => {
+  let component: DialogueComponent;
+  let fixture: ComponentFixture<DialogueComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ StudentDashboardComponent ]
+      declarations: [ DialogueComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(StudentDashboardComponent);
+    fixture = TestBed.createComponent(DialogueComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

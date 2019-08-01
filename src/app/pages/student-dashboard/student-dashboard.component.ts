@@ -1,5 +1,5 @@
 import { Component, OnInit, NgModule } from '@angular/core';
-import  {StsidebarComponent }from '../../studentcom/stsidebar/stsidebar.component'
+
 
 
 @Component({
@@ -9,10 +9,10 @@ import  {StsidebarComponent }from '../../studentcom/stsidebar/stsidebar.componen
 })
 
 @NgModule({
-  declarations: [StudentDashboardComponent,StsidebarComponent],
+  declarations: [StudentDashboardComponent],
   exports: [StudentDashboardComponent],
   imports: [
-    StsidebarComponent,
+    
   ],
 })
 export class StudentDashboardComponent implements OnInit {

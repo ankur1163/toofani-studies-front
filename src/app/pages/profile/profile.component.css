@@ -1,0 +1,125 @@
+.sidebar{
+    
+    border-style:none;
+    width:20%;
+    color:white;
+    /*background: linear-gradient(180deg,rgba(106, 130, 251, .8) 50%, rgba(252, 92, 125, .5) 50%),
+    url(/../../assets/resize.jpg)*/
+    /*background-color: #EA5D88;*/
+      /* fallback for old browsers */
+
+background: linear-gradient(to right, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    background-size: cover;
+    
+}
+
+.maincontent{
+   margin-top:10px;
+   margin-left: 10px;
+
+}
+
+.sidebarss{
+    color: rgb(241, 228, 228);
+    margin-left: 10px;
+}
+.sidebarlist{
+    
+    list-style-type: none;
+    height:20px;
+   
+    
+}
+.sidebartext{
+    
+    
+}
+
+.selectedsection{
+    background-color:rgba(44, 43, 43, 0.5)  ;
+    
+}
+.score{
+    color:purple;
+    height:22px;
+    width:60px;
+    background-color: aqua;
+
+}
+
+:host ::ng-deep mat-select.color-red .mat-select-value-text,
+:host ::ng-deep mat-select.color-white .mat-select-arrow { color: white !important; }
+
+:host ::ng-deep mat-select.unline.mat-form-field-underline {
+    background-color: rgb(255, 255, 255);
+}
+
+:host ::ng-deep mat-select.mat-select-value {
+    background-color: rgb(255, 255, 255);
+}
+
+:host ::ng-deep mat-option.color-blue {
+    color: blue;
+}
+:host ::ng-deep mat-label.color-white {
+    color: white;
+}
+
+.my-form-field.mat-form-field-appearance-legacy .mat-form-field-underline,
+.my-form-field.mat-form-field-appearance-legacy .mat-form-field-ripple,
+.my-form-field.mat-form-field-appearance-legacy.mat-focused
+    .mat-form-field-underline,
+.my-form-field.mat-form-field-appearance-legacy.mat-focused
+    .mat-form-field-ripple {
+    background-color: white !important;
+    border-bottom:peru !important;
+}
+
+.sidebarselectborder ::ng-deep 
+ {
+    border-bottom: #DCDCDC solid 1x ;
+}
+
+.scorebutton{
+    margin-right:10px;
+}
+
+
+.unline{
+    margin-left:15%;
+}
+
+.color-white{
+    color:white;
+}
+
+.sidebarselect{
+    color:red;
+}
+.mat-select-value{
+    color:white;
+}
+.fullmain{
+    
+    height:100vh;
+}
+
+.profilepic-sidebar{
+border-radius: 50%;
+margin-left: 25%;
+margin-top: 10%;
+}
+.upperbar{
+    color:black;
+    border-bottom: #DCDCDC solid 1px;
+   
+   height:-10px;
+}
+
+
+
+.example-container{
+    
+    height:100vh;
+}

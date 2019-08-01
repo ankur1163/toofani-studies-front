@@ -1,38 +1,14 @@
- 
+
         
         <mat-sidenav-container  class="example-container" >
-            <app-stsidebar></app-stsidebar>
+          <mat-sidenav class="sidebar" mode="side" opened>
+            <app-stsidebar2></app-stsidebar2>
+          </mat-sidenav>
             
 
                 <mat-sidenav-content  >
 
-                  <div fxLayoutAlign="end center" fxLayout="row" class="upperbar">
-                    
-                        <button  class="scorebutton" mat-raised-button color="primary">561</button>
-                   
-                    
-                    <mat-form-field>
-                        <mat-label>Select course</mat-label>
-                        <mat-select panelClass="example-panel-red" [(value)]="selected">
-                         
-                          <mat-option value="option1">Bank exam</mat-option>
-                          <mat-option value="option2">IBPS</mat-option>
-                          <mat-option value="option3">CLAT</mat-option>
-                        </mat-select>
-                      </mat-form-field>
-                      <button mat-button [matMenuTriggerFor]="menu1"><mat-icon> notification_important</mat-icon></button>
-                      <mat-menu #menu1="matMenu">
-                          <button mat-menu-item>Item 3</button>
-                          <button mat-menu-item>Item 4</button>
-                        </mat-menu>
-                    
-                    <button mat-button [matMenuTriggerFor]="menu"><mat-icon> account_circle</mat-icon></button>
-                    <mat-menu #menu="matMenu">
-                      <a routerLink="/profilestudent" routerLinkActive="active"> <button mat-menu-item>Profile</button></a>
-                      <a routerLink="/billingstudent" routerLinkActive="active"> <button mat-menu-item>Billing</button></a>
-                      <button mat-menu-item>Log out</button>
-                    </mat-menu>
-                  </div>
+                  <app-stupperbarmain></app-stupperbarmain>
 
                   <div>
                       <mat-tab-group class="fullmain" >

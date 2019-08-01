@@ -3,16 +3,35 @@
     border-style:none;
     width:20%;
     color:white;
-    /*background: linear-gradient(180deg,rgba(106, 130, 251, .8) 50%, rgba(252, 92, 125, .5) 50%),
-    url(/../../assets/resize.jpg)*/
-    /*background-color: #EA5D88;*/
-      /* fallback for old browsers */
-
-background: linear-gradient(to right, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    background: linear-gradient(to right, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-size: cover;
     
 }
+.profilepic-sidebar{
+    border-radius: 50%;
+    margin-left: 25%;
+    margin-top: 10%;
+    }
+
+    .unline{
+        margin-left:15%;
+    }
+    .color-white{
+        color:white;
+    }
+
+    .sidebarlist{
+    
+        list-style-type: none;
+        height:20px;
+       
+        
+    }
+
+    .selectedsection{
+        background-color:rgba(44, 43, 43, 0.5)  ;
+        
+    }
 
 .maincontent{
    margin-top:10px;
@@ -24,29 +43,11 @@ background: linear-gradient(to right, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, F
     color: rgb(241, 228, 228);
     margin-left: 10px;
 }
-.sidebarlist{
-    
-    list-style-type: none;
-    height:20px;
-   
-    
-}
-.sidebartext{
-    
-    
-}
 
-.selectedsection{
-    background-color:rgba(44, 43, 43, 0.5)  ;
-    
-}
-.score{
-    color:purple;
-    height:22px;
-    width:60px;
-    background-color: aqua;
 
-}
+
+
+
 
 :host ::ng-deep mat-select.color-red .mat-select-value-text,
 :host ::ng-deep mat-select.color-white .mat-select-arrow { color: white !important; }
@@ -76,57 +77,16 @@ background: linear-gradient(to right, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, F
     border-bottom:peru !important;
 }
 
-.sidebarselectborder ::ng-deep 
- {
-    border-bottom: #DCDCDC solid 1x ;
-}
-
-.scorebutton{
-    margin-right:10px;
-}
 
 
-.unline{
-    margin-left:15%;
-}
 
-.color-white{
-    color:white;
-}
-
-.sidebarselect{
-    color:red;
-}
 .mat-select-value{
     color:white;
 }
-.fullmain{
-    
-    height:100vh;
-}
 
-.profilepic-sidebar{
-border-radius: 50%;
-margin-left: 25%;
-margin-top: 10%;
-}
-.upperbar{
-    color:black;
-    border-bottom: #DCDCDC solid 1px;
-   
-   height:-10px;
-}
 
-.tab1{
-    
 
-}
-.tab2{
-    
-    
-}
 
-.example-container{
-    
-    height:100vh;
-}
+
+
+

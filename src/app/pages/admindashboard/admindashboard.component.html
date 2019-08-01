@@ -1,0 +1,83 @@
+<div fxLayoutAlign="end center" fxLayout="row" class="upperbaradmin">
+        <button  class="scorebutton" (click)="openDialog()" mat-raised-button color="primary">create new course</button>    
+    <mat-form-field>
+        <mat-label>Select course</mat-label>
+        <p>get it {{count$ | async }}</p>
+        <p></p>
+        <mat-select panelClass="example-panel-red" [(value)]="selected">
+         
+          <mat-option value="option1">Bank exam</mat-option>
+          <mat-option value="option2">IBPS</mat-option>
+          <mat-option value="option3">CLAT</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <button mat-button [matMenuTriggerFor]="menu1"><mat-icon> notification_important</mat-icon></button>
+      <mat-menu #menu1="matMenu">
+          <button mat-menu-item>Item 3</button>
+          <button mat-menu-item>Item 4</button>
+        </mat-menu>
+    
+    <button mat-button [matMenuTriggerFor]="menu"><mat-icon> account_circle</mat-icon></button>
+    <mat-menu #menu="matMenu">
+      <a routerLink="/profilestudent" routerLinkActive="active"> <button mat-menu-item>Profile</button></a>
+      <a routerLink="/billingstudent" routerLinkActive="active"> <button mat-menu-item>Billing</button></a>
+      <button mat-menu-item>Log out</button>
+    </mat-menu>
+    </div>
+    <div fxLayoutAlign="start center" fxLayout="row">
+            <div cdkDropList (cdkDropListDropped)="drop($event)">
+                    <div *ngFor="let artist of artists" class="pop" cdkDrag>{{artist}}</div>
+                    <button class="buttonsectionnew" mat-raised-button color="primary">Add new Section</button>
+                </div>
+                    
+            <div class="verticalline"></div>
+
+            <div cdkDropList (cdkDropListDropped)="drop($event)">
+                    <div *ngFor="let artist of artists" class="pop" cdkDrag>{{artist}}</div>
+                    <button class="buttonsectionnew" mat-raised-button color="primary">Add new SubSection</button>
+                </div>
+                    
+            <div class="verticalline"></div>
+            <div class="editor" fxFlexAlign="start">
+                <button class="buttonsectionnew" mat-raised-button color="primary">Add or Update content</button>
+                <angular-editor  [(ngModel)]="htmlContent" [config]="config"></angular-editor>
+                <h5 class="html-header">HTML Output</h5>
+                <div class="html">
+                    {{ htmlContent }}
+                </div>
+               <p>Create new question this is awesome and this is great . lets talk this in general and make it out as well. </p>
+               <mat-form-field class="example-full-width">
+                  <textarea matInput placeholder="Question"></textarea>
+                 
+                </mat-form-field><br/>
+                <mat-form-field class="example-full-width">
+                    
+                    <textarea matInput placeholder="Option 1"></textarea>
+                   
+                  </mat-form-field><br/>
+                  <mat-form-field class="example-full-width">
+                    
+                      <textarea matInput placeholder="Option 2"></textarea>
+                     
+                    </mat-form-field><br/>
+                    <mat-form-field class="example-full-width">
+                    
+                        <textarea matInput placeholder="Option 3"></textarea>
+                       
+                      </mat-form-field><br/>
+                      <mat-form-field class="example-full-width">
+                    
+                          <textarea matInput placeholder="Option 4"></textarea>
+                         
+                        </mat-form-field>
+               
+                
+              
+                
+            </div>
+            
+                
+
+    </div>
+    
+    

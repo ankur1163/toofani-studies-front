@@ -1,0 +1,20 @@
+
+
+.scorebutton{
+    margin-right:15px;
+}
+
+
+.upperbar{
+    color:black;
+    border-bottom: #DCDCDC solid 1px;
+   
+   height:-10px;
+}
+
+
+
+.example-container{
+    
+    height:100vh;
+}

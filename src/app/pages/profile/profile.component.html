@@ -1,1 +1,53 @@
-<p>profile works!</p>
+
+        
+        <mat-sidenav-container  class="example-container" >
+            <mat-sidenav class="sidebar" mode="side" opened>
+              <app-stsidebar2></app-stsidebar2>
+            </mat-sidenav>
+              
+  
+                  <mat-sidenav-content  >
+  
+                    <app-stupperbarmain></app-stupperbarmain>
+  
+                    <div>
+                        <div>
+                            <mat-tab-group class="fullmain" >
+                                <mat-tab  class="tab1" label="Profile"> 
+                                  <div class ="maincontent">
+                                    <mat-card class="example-card">
+                                        <mat-card-header>
+                                          <div mat-card-avatar class="example-header-image"></div>
+                                          <mat-card-title>Kellie Woods</mat-card-title>
+                                          <mat-card-subtitle>Student</mat-card-subtitle>
+                                        </mat-card-header>
+                                      
+                                        <mat-card-content>
+                                          <p>
+                                            I am a student and I love to study new topics. I reallly want to become something n my life. I come from a humble background.
+                                          </p>
+                                          <h3>Phone number</h3><p>7018244562</p>
+                                          <h3>Courses Taken</h3><p>CLAT</p>
+                                          <h3>Gender</h3><p>Female</p>
+                                        </mat-card-content>
+                                        
+                                      </mat-card>    
+                                  </div>
+                                    
+                                </mat-tab>
+                                
+                                <mat-tab class="tab2" label="Edit Profile"> q-what do you want? </mat-tab>
+                              </mat-tab-group>
+                        </div>
+                    </div>
+          
+          
+          
+                  </mat-sidenav-content>
+                </mat-sidenav-container>
+              <router-outlet></router-outlet>
+  
+  
+  
+     
+      

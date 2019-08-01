@@ -6,7 +6,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { ForgotpasswordComponent } from './pages/forgotpassword/forgotpassword.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { BillingComponent } from './pages/billing/billing.component';
-
+import {AdmindashboardComponent} from './pages/admindashboard/admindashboard.component';
 const routes: Routes=[
     
     {path:'signup',component:SignupComponent},
@@ -14,6 +14,7 @@ const routes: Routes=[
     {path:'forgotpassword',component:ForgotpasswordComponent},
     {path:'profilestudent',component:ProfileComponent},
     {path:'billingstudent',component:BillingComponent},
+    {path:'admindashboard',component:AdmindashboardComponent},
     {path:'',component:StudentDashboardComponent}
 ]
 

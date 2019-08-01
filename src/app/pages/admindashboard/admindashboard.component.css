@@ -1,0 +1,40 @@
+
+
+.upperbaradmin{
+    background-color: red;
+}
+
+.pop{
+    height: 50px;
+    
+   
+    border: 1px solid saddlebrown;
+    
+    
+    
+}
+.example-full-width {
+    width: 80%;
+  }
+.editor{
+    margin-top: 10px;
+}
+
+.scorebutton{
+    margin-right:15px;
+}
+
+.verticalline{
+    
+    width:1px;
+    height:100vh;
+    margin: 10px;
+    border-right: 2px solid  rgb(104, 96, 96);
+   
+
+}
+
+.buttonsectionnew{
+    margin-left: 10px;
+    margin-top: 10px;
+}
