@@ -8,8 +8,12 @@ import { DialogueComponent } from 'src/app/commoncomponents/dialogue/dialogue.co
 import { MatDialog } from '@angular/material';
 import { Store, select } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import * as Numberaction from '../../store/actions/admindashboard.actions';
+import {AddNumber} from '../../store/actions/admindashboard.actions';
+import {courseslist} from '../../store/actions/courseslist.actions';
+
 import { async } from '@angular/core/testing';
+import { tap, map } from 'rxjs/operators';
+import { State } from '@ngrx/store';
 
 @Component({
   selector: 'app-admindashboard',
@@ -19,8 +23,13 @@ import { async } from '@angular/core/testing';
 
 
 export class AdmindashboardComponent implements OnInit {
-  count:Observable<{count:Number}>;
+  count$:Observable<{count:Number}>;
+  coursesList$:Observable<{coursesList:string[]}>;
+  c;
   htmlContent = '';
+  propertyValue;
+  coursesSubscribed;
+  coursesList;
   
  
   
@@ -48,7 +57,7 @@ export class AdmindashboardComponent implements OnInit {
       },
     ]
   };
-  count$: any;
+  
   
   
   
@@ -71,40 +80,51 @@ export class AdmindashboardComponent implements OnInit {
     'Artist XII - Seyi Shay',
     'Artist XIII - Teni'
   ];
-  constructor(private apollo: Apollo,public dialog: MatDialog,private store:Store<{Numbers:{count:number}}>) { }
+  constructor(private apollo: Apollo,public dialog: MatDialog,private store:Store<{ count: number }>,private state: State<{count:Number}>) {
+    this.count$ = store.pipe(select('Numbers'));
+    
+    
+   }
 
   openDialog(): void {
+    var gt =Math.random();
     const dialogRef = this.dialog.open(DialogueComponent, {
       width: '250px',
 
-      // data: {name: this.name, animal: this.animal}
     });
    
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialogddd was closed',this.store.select('Numbers'));
-      this.store.dispatch(new Numberaction.AddNumber())
-      console.log("count$",this.count$)
       
-    });
+      this.store.dispatch(new AddNumber({toadd:gt}));
+     });
   }
 
   ngOnInit() {
-    console.log("get it",this.store);
+   this.coursesSubscribed= this.count$.subscribe(email => {
+      this.propertyValue = email;
+  })
     
-    this.count$ = this.store.pipe(select('count'));
+ 
+  
     this.apollo
     .watchQuery({
       query: gql`
         {
           courses{
-            courseName
+            courseName,
+            id
           }
         }
       `,
     })
     .valueChanges.subscribe(result => {
      console.log("result",result.data)
+     this.coursesList = result.data;
     });
+  }
+
+  ngOnDestroy(){
+      this.coursesSubscribed.unsubscribe();
   }
 
 

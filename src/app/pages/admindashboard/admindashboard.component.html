@@ -2,8 +2,9 @@
         <button  class="scorebutton" (click)="openDialog()" mat-raised-button color="primary">create new course</button>    
     <mat-form-field>
         <mat-label>Select course</mat-label>
-        <p>get it {{count$ | async }}</p>
-        <p></p>
+        
+        <p>{{propertyValue.count}}</p>
+       
         <mat-select panelClass="example-panel-red" [(value)]="selected">
          
           <mat-option value="option1">Bank exam</mat-option>
