@@ -9,7 +9,8 @@ import { MatDialog } from '@angular/material';
 import { Store, select } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import {AddNumber} from '../../store/actions/admindashboard.actions';
-import {courseslist} from '../../store/actions/courseslist.actions';
+import {CoursesList} from '../../store/actions/coursesList.actions';
+
 
 import { async } from '@angular/core/testing';
 import { tap, map } from 'rxjs/operators';
@@ -24,7 +25,7 @@ import { State } from '@ngrx/store';
 
 export class AdmindashboardComponent implements OnInit {
   count$:Observable<{count:Number}>;
-  coursesList$:Observable<{coursesList:string[]}>;
+  coursesList$:Observable<{CoursesList:string[]}>;
   c;
   htmlContent = '';
   propertyValue;
@@ -80,8 +81,9 @@ export class AdmindashboardComponent implements OnInit {
     'Artist XII - Seyi Shay',
     'Artist XIII - Teni'
   ];
-  constructor(private apollo: Apollo,public dialog: MatDialog,private store:Store<{ count: number }>,private state: State<{count:Number}>) {
+  constructor(private apollo: Apollo,public dialog: MatDialog,private store:Store<{ count: number,courseslist:string[] }>) {
     this.count$ = store.pipe(select('Numbers'));
+    this.coursesList$= store.pipe(select('courseslist'))
     
     
    }
@@ -104,8 +106,7 @@ export class AdmindashboardComponent implements OnInit {
       this.propertyValue = email;
   })
     
- 
-  
+
     this.apollo
     .watchQuery({
       query: gql`
@@ -118,8 +119,10 @@ export class AdmindashboardComponent implements OnInit {
       `,
     })
     .valueChanges.subscribe(result => {
-     console.log("result",result.data)
+     console.log("result is here",result.data)
      this.coursesList = result.data;
+     this.store.dispatch(new CoursesList({coursesList:result.data as Array<object>}) );
+
     });
   }
 

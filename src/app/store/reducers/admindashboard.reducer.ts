@@ -7,7 +7,7 @@ const initialState = {
 };
 
 export function adminDashboardReducer(state=initialState,action:any){
-  console.log("reducer",action.payload)
+  console.log("reducer admindashboard",action.payload)
   
     switch(action.type) {
       case 'ADD_NUMBER':

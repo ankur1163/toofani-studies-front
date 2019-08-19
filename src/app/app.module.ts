@@ -23,6 +23,7 @@ import { FormsModule } from '@angular/forms';
 import { GraphQLModule } from './graphql.module';
 import { DialogueComponent } from './commoncomponents/dialogue/dialogue.component';
 import { adminDashboardReducer } from './store/reducers/admindashboard.reducer';
+import {coursesListReducer} from './store/reducers/CoursesList.reducer';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +45,7 @@ import { adminDashboardReducer } from './store/reducers/admindashboard.reducer';
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
-    StoreModule.forRoot({Numbers:adminDashboardReducer}),
+    StoreModule.forRoot({Numbers:adminDashboardReducer,CoursesList:coursesListReducer}),
     AppRoutingModule,
     FlexLayoutModule,
     DragDropModule,
